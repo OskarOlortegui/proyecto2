@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+}
+
+/* HEADER */
+header{
+    background: linear-gradient(45deg, #5979D1, #58C9AF);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title{
+    color: #fff;
+    margin: 5px 0;
+    padding: 5px 0;
+    font-size: 1.2rem;
+}
+
+header nav{
+    margin: 10px 0;
+}
+header li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 .5rem;
+    margin-bottom: 10px;
+}
+
+            header li a#iHome::before{
+                content: '\f015';
+                font-family: fontAwesome;
+                padding-right: 8px;
+            }
+
+            header li a#iLandscape::before{
+                content: '\f03e'; /* <i class="far fa-image"></i>*/
+                font-family: fontAwesome;
+                padding-right: 8px;
+            }
+
+            header li a#iPictures::before{
+                content: '\f3e0'; /*<i class="fas fa-portrait"></i>*/
+                font-family : fontAwesome;
+                padding-right: 8px;
+            }
+
+header a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+header a[id^='i']:hover{ 
+    color: #252627;
+}
+
+header a[id^='i'].here{ 
+    color: #252627;
+    border-bottom: 1px solid #fff;
+}
+/*////////////////////////////////////////*/
+
+/*Banner*/
+.banner{
+    background: #fff;
+}
+
+.banner figure{
+    margin: 20px;
+}
+
+.banner figure img{
+    width: 100%;
+    box-shadow: 6px 6px 6px #111;
+}
+/*////////////////////////////////////*/
+
+/*Transform*/
+.transform{
+    background: linear-gradient(to top, #58C9AF, #BCD8C1);
+    padding: 10px;
+}
+
+.transform figure{
+    margin: 20px;
+    padding: 10px;
+}
+
+.transform img{
+    width: 100%;
+    box-shadow: 6px 6px 6px #111;
+    cursor: pointer;
+
+    transition: transform .5s ease-out;
+}
+
+.transform figure #blur{
+  filter: blur(6px);  
+}
+
+.transform figure #sepia{
+    filter: sepia(100%);  
+}
+
+.transform figure .gray{
+    filter: grayscale(100%);
+}
+
+#rotate:hover{
+    transform: rotateZ(10deg);
+}
+
+#translate:hover{
+    transform: translate(20px,-30px);
+}
+
+.transform p{
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 10px;
+    font-size: 1.2rem;
+}
+/*/////////////////////////////////*/
+
+
+/*Footer*/
+footer{
+    background-color: #E8D263;
+}
+
+footer ul{
+    padding: 20px;
+}
+
+footer li{
+    list-style: none;
+}
+
+footer ul li:first-child{
+    font-size: 2rem !important;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+footer ul:nth-child(2){
+    padding: 10px 20px !important;
+}
+
+footer ul li{
+    font-size: 1.2rem;
+}
+
+footer ul:last-child{
+    background-color: #E8C100;
+}
+/*/////////////////*/
+
+/*Media Queries*/
+@media screen and (min-width: 768px){
+    #title{
+        font-size: 2rem;
+    }
+
+    header li{
+        padding: 0 1rem;
+    }
+
+    header a{
+        font-size: 1.6rem;
+    }
+
+    footer ul li:first-child{
+        font-size: 3rem !important;
+    }
+    
+    footer ul:nth-child(2){
+        padding: 10px 20px !important;
+    }
+    
+    footer ul li{
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 30px;
+    }
+    
+    #title{
+        font-size: 1.8rem;
+    }
+    
+    header li{
+        padding: 0 1.2rem;
+        margin-bottom: 0;
+    }
+    
+    .banner figure{
+        margin: 40px;
+    }
+
+    /**/
+    .transform{
+        display: flex;
+    }
+    
+    .transform p{
+        font-size: 1.8rem;
+    }
+
+    .grid{
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+    /*---*/
+    footer{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    footer ul li:first-child{
+        font-size: 2rem !important;
+    }
+    
+    footer ul li{
+        font-size: 1.2rem;
+    }
+    
+    footer ul:last-child{
+        background-color: #E8D263;
+    }
+}
+
+

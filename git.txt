@@ -1,0 +1,7 @@
+https://github.com/OskarOlortegui/proyecto2.git
+
+Pasos:
+1 entrar a tu github y en el + "crear nuevo repositorio"
+2 abrir terminal
+3 "git init" // iniciamos un nuevo repositorio
+4 agregarlo al repositorio con "git add -A"
